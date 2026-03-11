@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Accept address bro</h1>
+    <button id="btnGetCoord">get my coordinates</button>
+
+    <div id="response" >
+       
+    </div>
+    
+</body>
+<script>
+    const btn = document.getElementById("btnGetCoord");
+    btn.addEventListener("click", ()=>{
+        console.log("clicked");
+        navigator.geolocation.getCurrentPosition((data)=>{
+            console.log(data);
+            
+            const divresp = document.getElementById("response");
+            divresp.innerHTML = `<p>Latitude : ${data.coords.latitude} </p><p>Longitude : ${data.coords.longitude} </p>`;
+        });
+    })
+
+    
+
+</script>
+</html>
