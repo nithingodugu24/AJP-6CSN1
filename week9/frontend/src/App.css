@@ -1,0 +1,10 @@
+.card{
+  /* background-color: #d4fffd; */
+  margin-bottom: 25px;
+}
+
+
+form{
+  display: flex;
+  flex-direction: column;
+}
